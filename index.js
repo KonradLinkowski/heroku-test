@@ -1,13 +1,11 @@
 import express from 'express';
-import http from 'http';
 const app = express();
 
 app.use(express.json());
 app.get('/', (req, res) => {
-    res.send("hello world");
+    res.json("hello world");
 });
 app.post('/', (req, res) => {
-    doSomething();
     res.send("success");
 });
 
